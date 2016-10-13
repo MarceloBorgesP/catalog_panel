@@ -1,0 +1,14 @@
+<ul class="list-unstyled">
+  <form id="categories-form">
+    {{#each categories as |category|}}
+      <li>
+        <label>
+          <input type="checkbox" value='{{category}}'>
+          {{category}}
+        </label>
+      </li>
+    {{/each}}
+    <input type="submit" class="btn btn-primary" value="Filtrar">
+  </form>
+</ul>
+
