@@ -1,0 +1,45 @@
+// TYPOGRAPHY
+
+a {
+  color: #000;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// COURSES
+
+.list-item {
+  margin-bottom: 15px;
+  .course {
+    border: 1px solid #ccc;
+    position: relative;
+    display: block;
+    max-width: 220px;
+    height: 240px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-transition: opacity,0.4s;
+    -moz-transition: opacity,0.4s;
+    transition: opacity,0.4s;
+    .description {
+      padding: 10px;
+      color: #444;
+      min-height: 65px;
+      text-align: left;
+      .title {
+        font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+        margin-bottom: 0;
+        -webkit-transition: color 0.2s linear 0s;
+        -moz-transition: color 0.2s linear 0s;
+        transition: color 0.2s linear 0s;
+      }
+    }
+  }
+}
