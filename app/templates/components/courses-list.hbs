@@ -8,9 +8,7 @@
           <img src="{{course.thumb}}" alt="{{course.title}}">
         </figure>
         <figcaption class="description">
-          <a href="#" class="title">
-            {{course.title}}
-          </a>
+          {{link-to course.title "courses.show" course.id class="title"}}
           <br>
           <span>
             com <a href="#">{{course.author}}</a>

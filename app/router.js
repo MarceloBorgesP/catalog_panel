@@ -9,6 +9,7 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('courses', function() {
     this.route('index', { path: '/' });
+    this.route('show', { path: '/:id'});
   });
 });
 

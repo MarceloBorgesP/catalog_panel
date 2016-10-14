@@ -5,7 +5,7 @@
     <h3 class="panel-title">POR ASSUNTO</h3>
   </div>
   <div class="panel-body">
-    {{categories-list object=model.courses}}
+    {{categories-list data=model}}
   </div>
 </div>
   <h2></h2>
@@ -13,5 +13,5 @@
 </div>
 
 <div class="col-md-10">
-  {{courses-list title="List of Courses" courses=model.courses}}
+  {{courses-list title="List of Courses" courses=model}}
 </div>
