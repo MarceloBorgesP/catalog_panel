@@ -2,6 +2,7 @@ body {
   font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
   height: 100%;
   width: 100%;
+  background-color: #f3f3f3;
 }
 
 .content {
@@ -69,4 +70,14 @@ a {
   margin: 0;
   padding: 8px 30px 8px 12px;
   border-left: 1px solid #e7e7e7;
+}
+
+// PANELS
+
+.panel {
+  border: 0;
+  padding: 10px;
+  .panel-heading {
+    background-color: transparent;
+  }
 }

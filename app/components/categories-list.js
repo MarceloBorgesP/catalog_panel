@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  type: "all",
+  type: "",
   init() {
     this._super('courses');
     var elems = this.get('data');
