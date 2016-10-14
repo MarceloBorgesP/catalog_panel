@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  type: "all",
   init() {
     this._super('courses');
     var elems = this.get('data');
@@ -13,5 +14,11 @@ export default Ember.Component.extend({
       }
     });
     this.set('categories', categories);
+  },
+  actions: {
+    filterCategory: function() {
+      var type = this.get('type');
+      this.get('filterCategory')(type);
+    }
   }
 });

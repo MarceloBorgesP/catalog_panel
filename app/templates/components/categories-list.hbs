@@ -1,14 +1,16 @@
 <ul class="list-unstyled">
   <form id="categories-form">
+
+    {{#radio-button value='all' groupValue=type changed="filterCategory"}}
+      Todas
+    {{/radio-button}}
+
     {{#each categories as |category|}}
       <li>
-        <label>
-          <input type="checkbox" value='{{category}}'>
+        {{#radio-button value=category groupValue=type changed="filterCategory"}}
           {{category}}
-        </label>
+        {{/radio-button}}
       </li>
     {{/each}}
-    <input type="submit" class="btn btn-primary" value="Filtrar">
   </form>
 </ul>
-

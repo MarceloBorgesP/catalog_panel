@@ -2,7 +2,7 @@
 
 <ul class="row">
   {{#each courses as |course|}}
-    <li class="col-md-3 list-unstyled list-item">
+    <li class="col-md-3 list-unstyled list-item {{course.status}}">
       <div class="course">
         <figure>
           <img src="{{course.thumb}}" alt="{{course.title}}">
