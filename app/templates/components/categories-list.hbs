@@ -1,9 +1,10 @@
-<ul class="list-unstyled">
-  <form id="categories-form">
-
-    {{#radio-button value='' groupValue=type changed="filterCategory"}}
-      Todas
-    {{/radio-button}}
+<form id="categories-form">
+  <ul class="list-unstyled">
+    <li>
+      {{#radio-button value='' groupValue=type changed="filterCategory"}}
+        Todas
+      {{/radio-button}}
+    </li>
 
     {{#each categories as |category|}}
       <li>
@@ -12,5 +13,5 @@
         {{/radio-button}}
       </li>
     {{/each}}
-  </form>
-</ul>
+  </ul>
+</form>
