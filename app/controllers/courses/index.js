@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
     this.set("type", type);
     var model = this.get('model');
     model.map(item => {
-      if (item.get('category') == type || type == '') {
+      if (item.get('category') === type || type === '') {
         item.set('status', '');
       }
       else {

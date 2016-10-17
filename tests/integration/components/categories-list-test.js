@@ -2,12 +2,13 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import Ember from 'ember';
 
-moduleForComponent('courses-list', 'Integration | Component | courses list', {
+moduleForComponent('categories-list', 'Integration | Component | categories list', {
   integration: true
 });
 
 test('it renders', function(assert) {
-  var model = Ember.Object.create({
+
+  let model = Ember.Object.create({
     "id":7698,
     "title":"Cozinha vegetariana",
     "rating":5,
@@ -18,6 +19,7 @@ test('it renders', function(assert) {
     "author":"Luana Budel"
   });
   this.set('model', [model]);
-  this.render(hbs`{{courses-list courses=model}}`);
-  assert.equal(this.$('li.col-md-3').length, 1, '1 course was rendered');
+  this.render(hbs`{{categories-list data=model}}`);
+  
+  assert.equal(this.$('input[type=\'radio\']').length, 2, 'renders categories');
 });

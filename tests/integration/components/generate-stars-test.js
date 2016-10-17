@@ -6,19 +6,6 @@ moduleForComponent('generate-stars', 'Integration | Component | generate stars',
 });
 
 test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
-  this.render(hbs`{{generate-stars}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#generate-stars}}
-      template block text
-    {{/generate-stars}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.render(hbs`{{generate-stars rating=4}}`);
+  assert.equal(this.$('span.glyphicon-star').length, 4, 'There are 4 stars');
 });
