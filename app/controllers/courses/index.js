@@ -7,10 +7,10 @@ export default Ember.Controller.extend({
     var model = this.get('model');
     model.map(item => {
       if (item.get('category') === type || type === '') {
-        item.set('status', '');
+        item.set('display', '');
       }
       else {
-        item.set('status', 'hidden');
+        item.set('display', 'hidden');
       }
     });
     }
