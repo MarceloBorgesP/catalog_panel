@@ -10,10 +10,15 @@
         </button>
         <figure class="logo">
           {{#link-to "courses"}}
-            <img alt="Logo eduK - Cursos Online com Certificado" itemprop="logo" src="//d28gaw6fmqgea0.cloudfront.net/assets/eduk-1dfc2216740d88f7602969dc905ed074.svg">
+            <img alt="Logo eduK - Cursos Online com Certificado" src="//d28gaw6fmqgea0.cloudfront.net/assets/eduk-1dfc2216740d88f7602969dc905ed074.svg">
           {{/link-to}}
         </figure>
       </div>
+      {{#if isCoursesIndex}}
+        <div class="collapse navbar-collapse">
+          {{search-bar search=(action "search")}}
+        </div>
+      {{/if}}
     </div>
   </nav>
 </header>
