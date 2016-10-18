@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  model: function() {
     var model = [];
     var self = this;
     return this.store.findAll('course').then(
@@ -12,12 +12,15 @@ export default Ember.Route.extend({
           }
           else {
             // THE QUERY FILTER IS NOT WORKING PROPERLY, SO THIS WORKAROUND WAS CREATED
-            // NOT TO LOAD COURSES WHICH ARE NOT PUBLISHED
+            // IN ORDER TO NOT LOAD COURSES WHICH ARE NOT PUBLISHED
             self.store.unloadRecord(course);
           }
         });
       return model;
       }
     );
+  },
+  setupController: function(controller, model) {
+    controller.set('model', this.store.peekAll('course'));
   }
 });
