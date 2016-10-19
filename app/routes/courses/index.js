@@ -22,5 +22,13 @@ export default Ember.Route.extend({
   },
   setupController: function(controller) {
     controller.set('model', this.store.peekAll('course'));
+  },
+  actions: {
+    didTransition: function() {
+      this.controllerFor('application').set('isCoursesIndex', true);
+    },
+    willTransition: function() {
+      this.controllerFor('application').set('isCoursesIndex', false);
+    }
   }
 });

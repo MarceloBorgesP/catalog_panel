@@ -2,9 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   'courses.index': Ember.inject.controller(),
-  isCoursesIndex: Ember.computed(function() {
-    return this.currentRouteName === 'courses.index';
-  }),
   actions: {
     search: function(param) {
       var model = this.store.peekAll('course');
