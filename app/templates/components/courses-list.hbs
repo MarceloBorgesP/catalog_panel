@@ -1,6 +1,6 @@
-<ul class="row">
+<div class="row">
   {{#each courses as |course|}}
-    <li class="col-md-3 col-sm-4 col-xs-6 list-unstyled list-item">
+    <div class="col-md-3 col-sm-4 list-unstyled list-item">
       <div class="course">
         <figure>
           <img src="{{course.thumb}}" alt="{{course.title}}">
@@ -14,6 +14,6 @@
           {{generate-stars rating=course.rating}}
         </figcaption>
       </div>
-    </li>
+    </div>
   {{/each}}
-</ul>
+</div>

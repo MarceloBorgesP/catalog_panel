@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   'courses.index': Ember.inject.controller(),
+  sideSidebarCollapse: true,
   actions: {
+    toggleSidebarCollapse() {
+      this.toggleProperty('sideSidebarCollapse');
+    },
     search: function(param) {
       var model = this.store.peekAll('course');
       var newModel = [];
