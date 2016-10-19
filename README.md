@@ -15,7 +15,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/MarceloBorgesP/catalog_panel.git`
 * `cd catalog-panel`
 * `npm install`
 * `bower install`
@@ -24,10 +24,6 @@ You will need the following things properly installed on your computer.
 
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -41,14 +37,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 ### Deploying
 
-Specify what it takes to deploy your app.
+This application is currently deployed in [Heroku](https://www.heroku.com/), if you also want to deploy it just follow the steps:
 
-## Further Reading / Useful Links
+- First of all you need to install the [Heroku Command Line](https://devcenter.heroku.com/articles/heroku-command-line)
+- Then inside of the project folder do: `heroku create --buildpack https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/emberjs.tgz`, this will create a buildpack in an s3 server in AWS.
+- To deploy: `git push heroku master`
+- And voilà, your app should be deployed and running, just type `heroku open` now to access it.
 
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
->>>>>>> Initial Commit from Ember CLI v2.8.0
+Pretty simple huh? Have fun!
