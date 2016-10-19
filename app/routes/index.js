@@ -1,7 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  beforeModel: function() {
-    this.transitionTo("courses.index");
+  activate: function(){
+    Ember.$('body').toggleClass("home")
+  },
+  deactivate: function(){
+    Ember.$('body').toggleClass("home")
   }
 });
