@@ -1,0 +1,168 @@
+body {
+  font-family: Ubuntu,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home {
+  background-image: url(//d28gaw6fmqgea0.cloudfront.net/assets/home/hero-7fdb9ce8db927fce2a9e919f05c2722a.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0px 59px;
+}
+
+// TYPOGRAPHY
+
+a {
+  color: #000;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+// COURSES
+
+.list-item {
+  margin-bottom: 15px;
+  .course {
+    border: 1px solid #ccc;
+    position: relative;
+    display: block;
+    max-width: 220px;
+    height: 270px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 4px;
+    -webkit-transition: opacity,0.4s;
+    -moz-transition: opacity,0.4s;
+    transition: opacity,0.4s;
+    position: relative;
+    .description {
+      padding: 10px;
+      color: #444;
+      min-height: 65px;
+      text-align: left;
+      .title {
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 17px;
+        margin-bottom: 0;
+        -webkit-transition: color 0.2s linear 0s;
+        -moz-transition: color 0.2s linear 0s;
+        transition: color 0.2s linear 0s;
+      }
+    }
+  }
+}
+
+// VIDEO
+
+.video-player {
+  width: 100%;
+  height: 100%;
+}
+
+//HEADER
+
+.navbar .logo {
+  width: 12.5%;
+  display: inline;
+  float: left;
+  margin: 0;
+  padding: 8px 30px 8px 12px;
+  border-left: 1px solid #e7e7e7;
+}
+
+// PANELS
+
+.panel {
+  border: 0;
+  padding: 10px;
+  .panel-heading {
+    background-color: transparent;
+  }
+  .panel-body {
+    padding: 5px;
+  }
+}
+
+// STARS
+
+.description .stars {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 5px 10px;
+}
+
+span.glyphicon-star {
+  color: #FFD35F;
+}
+
+// INPUT
+
+label {
+  width: 100%;
+  padding: 0 0 5px 5px;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  &.checked {
+    background-color: #FFF9BB;
+  }
+  input[type="radio"] {
+    visibility:hidden;
+    &:before {
+      visibility:visible;
+      content:"\002b";
+    }
+    &:checked {
+      visibility:hidden;
+      &:before {
+        visibility:visible;
+        content:"\e007";
+        color: #55BC79;
+      }
+    }
+  }
+}
+
+// BUTTONS
+
+.btn {
+  transition: background-color 433ms ease;
+  border: 0;
+  &:hover {
+    text-decoration:none;
+  }
+  &.btn-primary {
+    background-color: #f03;
+    &:hover {
+      background-color:#d1002a;
+      
+    }
+  }
+}
+
+.home .btn-primary {
+  border-radius: 5px;
+  font-size: 1.4em;
+  margin-top: 1.8em;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+.align-center {
+  align-items: center;
+  display: flex;
+  height: 85vh;
+  justify-content: center;
+}

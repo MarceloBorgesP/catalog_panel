@@ -1,0 +1,17 @@
+<form id="categories-form">
+  <ul class="list-unstyled">
+    <li>
+      {{#radio-button value='' groupValue=type changed="filterCategory"}}
+        Todas
+      {{/radio-button}}
+    </li>
+
+    {{#each categories as |category|}}
+      <li>
+        {{#radio-button value=category groupValue=type changed="filterCategory"}}
+          {{category}}
+        {{/radio-button}}
+      </li>
+    {{/each}}
+  </ul>
+</form>
