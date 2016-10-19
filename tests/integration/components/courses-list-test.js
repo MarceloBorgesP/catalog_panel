@@ -19,5 +19,5 @@ test('it renders', function(assert) {
   });
   this.set('model', [model]);
   this.render(hbs`{{courses-list courses=model}}`);
-  assert.equal(this.$('li.col-md-3').length, 1, '1 course was rendered');
+  assert.equal(this.$('div.col-md-3').length, 1, '1 course was rendered');
 });
